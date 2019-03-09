@@ -1,0 +1,36 @@
+$upper-header-height: 50px;
+$upper-header-list-item-width: 200px;
+$lower-header-default-height: 60px;
+$lower-header-expanded-height: 100px;
+$expanded-header-height: calc(
+  #{$upper-header-height} + #{$lower-header-default-height}
+);
+$expanded-header-height: calc(
+  #{$upper-header-height} + #{$lower-header-expanded-height}
+);
+
+.layout-header {
+  background: white;
+
+  .upper-header {
+    height: $upper-header-height;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    ul.header-contacts-list {
+      list-style-type: none;
+
+      .header-contact-list-item {
+        width: $upper-header-list-item-width;
+        border-left: 1px solid rgba(0, 0, 0, 0.25);
+        a {
+          span {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .call-back-btn {
+      width: $upper-header-list-item-width;
+    }
+  }
+}
