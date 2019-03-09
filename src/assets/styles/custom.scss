@@ -1,0 +1,568 @@
+// // colors
+// $violet: #42436b;
+// $light-violet: #989acc;
+// $dark-violet: #182746;
+// //images
+// $cloud-intro: '../img/cloud-intro.png';
+// $cloud-top: '../img/cloud-bottom.png';
+// $cloud-bottom: '../img/cloud-top.png';
+// $cloud-intro-2x: '../img/2x/cloud-intro.png';
+// $cloud-top-2x: '../img/2x/cloud-bottom.png';
+// $cloud-bottom-2x: '../img/2x/cloud-top.png';
+// //mixins
+// @mixin cloudy ($url) {
+//     left: 0;
+//     bottom: 0;
+//     content: "";
+//     width: 100%;
+//     height: 34rem;
+//     position: absolute;
+//     background: url($url) center center no-repeat;
+//     background-size: 100% auto;
+//     @include media-breakpoint-down(sm) {
+//         background-size: auto;
+//     }
+//     margin-bottom: -17rem;
+//     z-index: 300;
+// }
+
+// .modal-open {
+//     padding-right: 0px !important;
+// }
+
+// body {
+//     .btn {
+//         cursor: pointer;
+//     }
+//     p, ol, ul {
+//         line-height: 1.5!important;
+//     }
+//     .container-fluid {
+//         .container {
+//             z-index: 301;
+//         }
+//     }
+//     .text-bold {
+//         font-family: RalewayBold;
+//     }
+//     .text-light {
+//         color: $white;
+//     } //gradients
+//     .light-violet-gradient {
+//         background: url('../img/stars-pattern.png') left top, -moz-linear-gradient( 0deg, rgb(23, 38, 69) 0%, rgb(58, 66, 100) 23%, rgb(92, 93, 130) 54%, rgb(174, 177, 232) 100%);
+//         background: url('../img/stars-pattern.png') left top, -webkit-linear-gradient(0deg, #172645 0%, #3a4264 23%, #5c5d82 54%, #aeb1e8 100%);
+//         background: url('../img/stars-pattern.png') left top, -ms-linear-gradient( 0deg, rgb(23, 38, 69) 0%, rgb(58, 66, 100) 23%, rgb(92, 93, 130) 54%, rgb(174, 177, 232) 100%);
+//     }
+//     .white-gradient {
+//         background: rgb(235, 235, 237);
+//         /* Old browsers */
+//         background: -moz-linear-gradient(top, rgba(235, 235, 237, 1) 0%, rgba(255, 255, 255, 1) 100%);
+//         /* FF3.6-15 */
+//         background: -webkit-linear-gradient(top, rgba(235, 235, 237, 1) 0%, rgba(255, 255, 255, 1) 100%);
+//         /* Chrome10-25,Safari5.1-6 */
+//         background: linear-gradient(to bottom, rgba(235, 235, 237, 1) 0%, rgba(255, 255, 255, 1) 100%);
+//         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebed', endColorstr='#ffffff', GradientType=0);
+//         /* IE6-9 */
+//     }
+//     .dark-violet-gradient {
+//         background: rgb(23, 38, 69);
+//         /* Old browsers */
+//         background: -moz-linear-gradient(top, rgba(23, 38, 69, 1) 1%, rgba(36, 46, 75, 1) 100%);
+//         /* FF3.6-15 */
+//         background: -webkit-linear-gradient(top, rgba(23, 38, 69, 1) 1%, rgba(36, 46, 75, 1) 100%);
+//         /* Chrome10-25,Safari5.1-6 */
+//         background: linear-gradient(to bottom, rgba(23, 38, 69, 1) 1%, rgba(36, 46, 75, 1) 100%);
+//         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#172645', endColorstr='#242e4b', GradientType=0);
+//         /* IE6-9 */
+//     } //cloud
+//     .cloud-intro {
+//         position: relative;
+//         &:after {
+//             @include cloudy($cloud-intro);
+//         }
+//     }
+//     .cloud {
+//         position: relative;
+//         &:before {
+//             @include cloudy($cloud-bottom);
+//             top: 0;
+//             bottom: auto;
+//             margin-bottom: auto;
+//             margin-top: -17rem;
+//         }
+//         &:after {
+//             @include cloudy($cloud-top);
+//         }
+//     }
+//     .cloud-footer {
+//         &:before {
+//             height: 34rem;
+//             margin-top: -17rem;
+//             background-position: center bottom;
+//         }
+//     }
+//     .cloud-bottom {
+//         &:before {
+//             display: none;
+//         }
+//     }
+//     .cloud-top {
+//         &:after {
+//             display: none;
+//         }
+//     }
+//     .btn {
+//         width: 100%;
+//         display: block;
+//         height: 3.1rem;
+//         border-radius: 1.6rem;
+//         font-size: 1.5rem;
+//     }
+//     .card-proto {
+//         border-radius: 1.56rem;
+//         margin: auto;
+//         padding: 2.2rem;
+//         @include media-breakpoint-up(md) {
+//             max-width: 23rem;
+//         }
+//         img {
+//             width: 7.5rem;
+//             margin: auto;
+//         }
+//         .card-list {
+//             padding-left: 1.25rem;
+//         }
+//         &.light-violet {
+//             background: $light-violet;
+//             color: $white;
+//         }
+//         &.dark-violet {
+//             background: $violet;
+//             color: $white;
+//         }
+//     }
+// }
+
+// //header
+// .header {
+//     .navbar {
+//         .navbar-toggler {
+//             border-color: transparent;
+//             outline: none;
+//             .navbar-toggler-custom-icon {
+//                 font-size: 1.2rem;
+//             }
+//         }
+//     }
+// }
+
+// //intro
+// .intro {
+//     .intro-img-m {
+//         height: 15.8rem;
+//     }
+// }
+
+// //about
+// .about {
+//     color: $violet;
+//     .skills {
+//         .skill-item {
+//             img {
+//                 width: 13.75rem;
+//             }
+//         }
+//     }
+// }
+
+// //steps
+// .steps-wrapper {
+//     background-image: url('../img/timeline.png');
+//     background-color: $dark-violet;
+//     background-repeat: no-repeat;
+//     background-position: 0 10rem;
+//     background-size: 70%;
+//     .steps {
+//         .planet-1 {
+//             width: 4.1rem;
+//         }
+//         .planet-2 {
+//             width: 5.1rem;
+//         }
+//         .planet-3 {
+//             width: 6.1rem;
+//         }
+//         .planet-4 {
+//             width: 6.1rem;
+//         }
+//         .planet-5 {
+//             width: 13.1rem;
+//         }
+//         p {
+//             line-height: 1.6;
+//         }
+//     }
+// }
+
+// //team
+// .team {
+//     color: $violet;
+//     .team-list {
+//         .team-item {
+//             img {
+//                 width: 9.5rem;
+//             }
+//         }
+//     }
+// }
+
+// //projects
+// .projects-wrapper {
+//     background-image: url('../img/polar-lights_stars.png');
+//     background-color: $dark-violet;
+//     background-repeat: no-repeat;
+//     background-position: top right;
+//     background-size: auto 100%;
+//     .projects {
+//         p {
+//             line-height: 1.6;
+//         }
+//     }
+// }
+
+// //price
+// .price {
+//     color: $violet;
+//     .get-but {
+//         @include media-breakpoint-up(md) {
+//             max-width: 23rem;
+//         }
+//     }
+// }
+
+// //footer
+// .footer {
+//     height: 13.75rem;
+//     @include media-breakpoint-up(xxl) {
+//         height: 17.75rem;
+//     }
+//     background: $violet;
+//     a {
+//         color: $white;
+//         text-decoration: underline;
+//     }
+//     .mvp-logo {
+//         cursor: pointer;
+//     }
+//     .footer-sales {
+//         border-left: 1px solid $white;
+//         border-right: 1px solid $white;
+//     }
+//     .footer-nav {
+//         padding-top: 8.5rem;
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint xxxxl --------------------------------------------------------
+// @include media-breakpoint-down(xxxxl) {
+//     body {
+//         .steps-wrapper {
+//             background-position: 0 -45rem;
+//             background-size: 100%;
+//             h4 {
+//                 font-size: 1.25rem;
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 margin-top: -23.7rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint xxxl --------------------------------------------------------
+// @include media-breakpoint-down(xxxl) {
+//     body {
+//         .steps-wrapper {
+//             background-position: 0 -20rem;
+//             background-size: 100%;
+//             h4 {
+//                 font-size: 1.25rem;
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 margin-top: -26.7rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint xxl --------------------------------------------------------
+// @include media-breakpoint-down(xxl) {
+//     body {
+//         .cloud-footer {
+//             &:before {
+//                 margin-top: -26.7rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint xl --------------------------------------------------------
+// @include media-breakpoint-down(xl) {
+//     body {
+//         // .cloud {
+//         //     &:before {
+//         //         height: 11.56rem;
+//         //         margin-top: -6rem;
+//         //     }
+//         //     &:after {
+//         //         height: 11rem;
+//         //         margin-bottom: -5rem;
+//         //     }
+//         // }
+//         .steps-wrapper {
+//             background-position: 0 0;
+//             background-size: 76%;
+//         }
+//         .footer {
+//             // height: 12.75rem;
+//             .footer-nav {
+//                 padding-top: 1.5rem;
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 height: 34rem;
+//                 margin-top: -27.7rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint lg --------------------------------------------------------
+// @include media-breakpoint-down(lg) {
+//     body {
+//         .steps-wrapper {
+//             background-position: 0 21rem;
+//             background-size: 100%;
+//         }
+//         .footer {
+//             // height: 9.75rem;
+//             .footer-nav {
+//                 padding-top: 1.5rem;
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 height: 34rem;
+//                 margin-top: -28rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint md --------------------------------------------------------
+// @include media-breakpoint-down(md) {
+//     body {
+//         .cloud {
+//             &:before {
+//                 height: 28.56rem;
+//                 margin-top: -15rem;
+//             }
+//             &:after {
+//                 height: 27rem;
+//                 margin-bottom: -14rem;
+//             }
+//         }
+//         .menu {
+//             display: none;
+//         }
+//         .btn {
+//             height: 3.1rem;
+//             border-radius: 1.6rem;
+//             font-size: 1.5rem;
+//         }
+//         .steps-wrapper {
+//             background-position: 0 21rem;
+//             background-size: 100%;
+//             h4 {
+//                 font-size: 1.25rem;
+//             }
+//         }
+//         .footer {
+//             height: 10.75rem; 
+//             .footer-sales, .footer-marketing {
+//                 display: none!important;
+//             }
+//             .footer-nav {
+//                 padding-top: 1.5rem;
+//             }
+//         }
+//         .team {
+//             .team-list {
+//                 .team-item {
+//                     h2 {
+//                         font-size: 1.75rem;
+//                     }
+//                 }
+//             }
+//         }
+//         .footer {
+//             // height: 9.75rem;
+//             .footer-nav {
+//                 padding-top: 1.5rem;
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 height: 18.75rem;
+//                 margin-top: -15.5rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint sm --------------------------------------------------------
+// @include media-breakpoint-down(sm) {
+//     body {
+//         .cloud {
+//             &:before {
+//                 height: 27.56rem;
+//                 margin-top: -19rem;
+//             }
+//             &:after {
+//                 height: 27rem;
+//                 margin-bottom: -18rem;
+//             }
+//         }
+//         .btn {
+//             height: 2.2rem;
+//             font-size: 1.2rem;
+//             line-height: 1.1;
+//         }
+//         h1 {
+//             font-size: 1.6rem;
+//         }
+//         h2,
+//         h4 {
+//             font-size: 1.4rem;
+//         }
+//         .intro {
+//             p {
+//                 font-size: 1.12rem;
+//             }
+//         }
+//         .steps-wrapper {
+//             background-position: 0 5rem;
+//             background-size: 145%;
+//         }
+//         .projects-wrapper {
+//             .projects {
+//                 img {
+//                     width: 11rem;
+//                 }
+//                 p {
+//                     font-size: 1.12rem;
+//                 }
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 height: 27.56rem;
+//                 margin-top: -20.8rem;
+//             }
+//         }
+//         .footer {
+//             height: 18rem;
+//             .footer-sales,
+//             .footer-marketing {
+//                 border: none;
+//                 margin-top: 1rem;
+//                 img{
+//                     display:none;
+//                 }
+//             }            
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint xs --------------------------------------------------------
+// @include media-breakpoint-down(xs) {
+//     body {
+//         p, ul, ol {
+//             font-size: 1rem!important;
+//         }
+//         h3 {
+//             font-size: 1.4rem!important;
+//         }
+//         .btn {
+//             height: 2.2rem;
+//             font-size: 1.2rem;
+//             line-height: 1.1;
+//         }
+//         .steps-wrapper {
+//             background-position: 0 17rem;
+//             background-size: 225%;
+//         }
+//         .cloud {
+//             &:before {
+//                 height: 27.56rem;
+//                 margin-top: -19rem;
+//                 margin-bottom: -19rem;
+//             }
+//             &:after {
+//                 height: 28rem;
+//                 margin-bottom: -18rem;
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 height: 27.56rem;
+//                 margin-top: -20.7rem;
+//             }
+//         }
+//     }
+// }
+
+// // -------------------------------------------------------- breakpoint up xxxxl --------------------------------------------------------
+// @include media-breakpoint-up(xxxxl) {
+//     body {
+//         .cloud-intro {
+//             &:after {
+//                 @include cloudy($cloud-intro-2x);
+//                 width: 100%;
+//             }
+//         }
+//         .cloud {
+//             &:before {
+//                 @include cloudy($cloud-bottom-2x);
+//             }
+//             &:after {
+//                 @include cloudy($cloud-top-2x);
+//                 .projects {
+//                     margin-bottom: -20rem;
+//                 }
+//             }
+//         }
+//         .cloud-footer {
+//             &:before {
+//                 margin-top: -20.7rem;
+//             }
+//         }
+//         .steps-wrapper {
+//             &:before {
+//                 height: 28rem;
+//             }
+//         }
+//         .projects-wrapper {
+//             &:after {
+//                 margin-bottom: -20rem;
+//             }
+//         }
+//     }
+// }
