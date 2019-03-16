@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 
-const Layout = ({ children }) => (
+export const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -41,5 +41,3 @@ const Layout = ({ children }) => (
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;
