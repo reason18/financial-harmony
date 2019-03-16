@@ -47,8 +47,8 @@ const navigation = [
 const HeaderContactsList = ({ contacts }) => {
   return (
     <ul className="d-inline-block header-contacts-list m-0 p-0 h-100">
-      {contacts.map(contact => (
-        <li className="header-contact-list-item d-inline-block h-100 text-center">
+      {contacts.map((contact, i) => (
+        <li className="header-contact-list-item d-inline-block h-100 text-center" key={i}>
           <a
             href={`${contact.type}:${contact.value}`}
             data-rel="external"
@@ -86,16 +86,33 @@ const UpperHeader = () => {
 };
 
 const LowerHeader = ({}) => {
+  let leftSideNav = [];
+  let rightSideNav = [];
+  navigation.forEach((item, index) => {
+    if (index < 3) {
+      leftSideNav.push(item);
+    } else {
+      rightSideNav.push(item);
+    }
+  });
   return (
-    <nav>
-      <ul>
-        {navigation.map(item => (
-          <li className="d-inline-block">
-            <a className="h-100" href={`#${item.link}`}>{item.title}</a>
-          </li>
+    <div className="row lower-header">
+      <nav className="nav col px-0 justify-content-around align-items-center">
+        {leftSideNav.map((item, index) => (
+          <a className="nav-link" href={`#${item.link}`} key={index}>
+            {item.title}
+          </a>
         ))}
-      </ul>
-    </nav>
+      </nav>
+      <div className="col logo d-none"></div>
+      <nav className="nav  col px-0 justify-content-around align-items-center">
+        {rightSideNav.map((item, index) => (
+          <a className="nav-link" href={`#${item.link}`} key={index}>
+            {item.title}
+          </a>
+        ))}  
+      </nav>
+    </div>
   );
 };
 

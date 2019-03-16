@@ -33,4 +33,12 @@ $expanded-header-height: calc(
       width: $upper-header-list-item-width;
     }
   }
+
+  .lower-header {
+    height: $lower-header-expanded-height;
+
+    .nav-link {
+      max-height: $upper-header-height;
+    }
+  }
 }
