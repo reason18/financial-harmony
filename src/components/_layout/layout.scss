@@ -2,7 +2,7 @@ $upper-header-height: 50px;
 $upper-header-list-item-width: 200px;
 $lower-header-default-height: 60px;
 $lower-header-expanded-height: 100px;
-$expanded-header-height: calc(
+$default-header-height: calc(
   #{$upper-header-height} + #{$lower-header-default-height}
 );
 $expanded-header-height: calc(
