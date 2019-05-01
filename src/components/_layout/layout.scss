@@ -1,7 +1,7 @@
 $upper-header-height: 50px;
 $upper-header-list-item-width: 200px;
-$lower-header-default-height: 60px;
-$lower-header-expanded-height: 100px;
+$lower-header-default-height: 50px;
+$lower-header-expanded-height: 80px;
 $default-header-height: calc(
   #{$upper-header-height} + #{$lower-header-default-height}
 );
@@ -10,12 +10,17 @@ $expanded-header-height: calc(
 );
 
 .layout-header {
+  position: fixed;
   background: white;
 
   .upper-header {
     height: $upper-header-height;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-
+    overflow: hidden;
+    transition: all .3s ease-out;
+    &.hidden {
+      height: 0;
+    }
     ul.header-contacts-list {
       list-style-type: none;
 
@@ -35,10 +40,47 @@ $expanded-header-height: calc(
   }
 
   .lower-header {
-    height: $lower-header-expanded-height;
+    height: $lower-header-default-height;
+    border-bottom: 1px solid black;
+    transition: height .3s ease-in;
 
     .nav-link {
       max-height: $upper-header-height;
     }
+    &.expanded {
+      height: $lower-header-expanded-height;
+    }
   }
+
+  .header-logo {
+    max-width: 60px;
+    transition: max-width .3s ease;
+    .logo-wrapper {
+      display: block;
+      opacity: 1;
+      padding: 2px 0px;
+      transform: scale(1);
+      transform-origin: bottom;
+      transition: all .2s ease-in-out;
+    }
+    img {
+      max-width: 44px;
+      display: block;
+      margin: auto;
+    }
+    &.hidden {
+      max-width: 0px;
+      .logo-wrapper {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom;
+        transition: transform .2s ease-in-out;
+      }
+    }
+    
+  }
+}
+
+.page-content {
+  padding-top: 250px;
 }
