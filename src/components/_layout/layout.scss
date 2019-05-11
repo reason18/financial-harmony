@@ -46,6 +46,10 @@ $expanded-header-height: calc(
 
     .nav-link {
       max-height: $upper-header-height;
+      color: #666666;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
     }
     &.expanded {
       height: $lower-header-expanded-height;

@@ -20,13 +20,18 @@ const contacts = [
 
 const navigation = [
   {
-    link: "/services",
-    title: "Услуги",
-  },
-  {
     link: "/about",
     title: "О нас",
   },
+  {
+    link: "/clients",
+    title: "Наши клиенты",
+  },
+  {
+    link: "/services",
+    title: "Наши услуги",
+  },
+
   {
     link: "/advantages",
     title: "Преимущества",
@@ -38,10 +43,6 @@ const navigation = [
   {
     link: "/become-a-client",
     title: "Как стать клиентом",
-  },
-  {
-    link: "/contacts",
-    title: "Контакты",
   },
 ];
 
@@ -73,9 +74,9 @@ const UpperHeader = ({show}) => {
           <option value={0}>RU</option>
           <option value={1}>UA</option>
         </select>
+        <HeaderContactsList contacts={contacts} />
       </div>
       <div className="header-contacts">
-        <HeaderContactsList contacts={contacts} />
         <button
           type="button"
           className="call-back-btn btn btn-success rounded-0 h-100"
