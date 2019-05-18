@@ -48,7 +48,7 @@ const navigation = [
 
 const HeaderContactsList = ({ contacts }) => {
   return (
-    <ul className="d-inline-block header-contacts-list m-0 p-0 text-black">
+    <ul className="d-inline-block header-contacts-list m-0 text-black">
       {contacts.map((contact, i) => (
         <li
           className="header-contact-list-item d-inline-block text-center"
