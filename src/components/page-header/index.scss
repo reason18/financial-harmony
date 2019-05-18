@@ -1,0 +1,37 @@
+.page-header {
+  position: relative;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+
+  letter-spacing: 0.02em;
+  color: #444444;
+}
+
+.page-header span {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.page-header span:before{
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #256CF1 0.83%, #73F5FC 99.17%);
+  border-radius: 5px;
+}
+
+.page-header.aling-left span:before{
+  top: -20px;
+  left: 0;
+}
+
+.page-header.aling-center {
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}

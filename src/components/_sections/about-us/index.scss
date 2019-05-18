@@ -1,0 +1,61 @@
+$min-section-height: 728px;
+$background-color: #EEF1FB;
+
+.about-us {
+    min-height: $min-section-height;
+    background-color: $background-color;
+    padding-top: 176px;
+
+    .illustration-placeholder {
+        height: 370px;
+        width: 100%;
+        background-color: burlywood;
+        border-radius: 10px;
+    }
+}
+
+.about-us-illustration {
+    padding-right: 95px!important;
+}
+
+.about-us-info {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.about-us-goals {
+    h3 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+
+        letter-spacing: 0.02em;
+
+        color: #444444;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        position: relative;
+        padding-left: 20px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            display: block;
+            -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+            width: 6px;
+            height: 6px;
+            background: #246AF0;
+            border-radius: 50%;
+        }
+    }
+}
