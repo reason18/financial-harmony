@@ -1,7 +1,9 @@
-$upper-header-height: 50px;
+$upper-header-height: 78px;
 $upper-header-list-item-width: 200px;
 $lower-header-default-height: 50px;
-$lower-header-expanded-height: 80px;
+$lower-header-expanded-height: 60px;
+$primary-font-family: "Montserrat", sans-serif;
+$secondary-font-family: "Open Sans", sans-serif;
 $default-header-height: calc(
   #{$upper-header-height} + #{$lower-header-default-height}
 );
@@ -9,40 +11,63 @@ $expanded-header-height: calc(
   #{$upper-header-height} + #{$lower-header-expanded-height}
 );
 
+.font-primary {
+  font-family: $primary-font-family;
+}
+
+.font-secondary {
+  font-family: $secondary-font-family;
+}
+
 .layout-header {
   position: fixed;
   background: white;
 
   .upper-header {
     height: $upper-header-height;
+    padding-top: 19px;
+    padding-bottom: 19px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     &.hidden {
       height: 0;
+      padding: 0;
+      border: 0;
+    }
+    .contacts {
+      font-size: 14px;
+      line-height: 40px;
+    }
+    .localization-switch {
+      border: none;
+      line-height: 20px;
+      vertical-align: middle;
+    }
+    .callback {
     }
     ul.header-contacts-list {
       list-style-type: none;
+      line-height: 20px;
+      border-left: 1px solid rgba(0, 0, 0, 0.25);
+      vertical-align: middle;
 
       .header-contact-list-item {
         width: $upper-header-list-item-width;
-        border-left: 1px solid rgba(0, 0, 0, 0.25);
         a {
+          color: black;
           span {
             vertical-align: middle;
           }
         }
       }
     }
-    .call-back-btn {
-      width: $upper-header-list-item-width;
-    }
   }
 
   .lower-header {
     height: $lower-header-default-height;
-    border-bottom: 1px solid black;
-    transition: height .3s ease-in;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    transition: height 0.1s ease-in;
 
     .nav-link {
       max-height: $upper-header-height;
@@ -58,14 +83,14 @@ $expanded-header-height: calc(
 
   .header-logo {
     max-width: 60px;
-    transition: max-width .3s ease;
+    transition: max-width 0.3s ease;
     .logo-wrapper {
       display: block;
       opacity: 1;
       padding: 2px 0px;
       transform: scale(1);
       transform-origin: bottom;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
     img {
       max-width: 44px;
@@ -78,13 +103,28 @@ $expanded-header-height: calc(
         opacity: 0;
         transform: scale(0);
         transform-origin: bottom;
-        transition: transform .2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
       }
     }
-    
   }
 }
 
 .page-content {
   padding-top: 250px;
+}
+
+.container-wrapper {
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+.custom-button {
+  background-color: #246af0;
+  // max-height: 38px;
+  padding: 8px 50px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: $primary-font-family;
+  font-weight: bold;
+  line-height: 22px;
 }
