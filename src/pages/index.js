@@ -3,6 +3,7 @@ import React from "react";
 
 import { Layout, Image, SEO } from "../components";
 import { Promo, OutServices, AboutUs } from "../components/_sections";
+import "../assets/fonts/fonts.css";
 
 import "./index.scss";
 
