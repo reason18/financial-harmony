@@ -1,16 +1,52 @@
-$min-section-height: 728px;
+$min-section-height: 628px;
 $background-color: #EEF1FB;
+$about-us-padding-top: 176px;
+$about-us-padding-bottom: 130px;
 
 .about-us {
+    position: relative;
     min-height: $min-section-height;
-    background-color: $background-color;
-    padding-top: 176px;
+    padding-top: $about-us-padding-top;
+    padding-bottom: $about-us-padding-bottom;
+    // background-image: url("background_1.svg");
+
+    .about-us-content {
+        background-color: $background-color;
+    }
 
     .illustration-placeholder {
         height: 370px;
         width: 100%;
         background-color: burlywood;
         border-radius: 10px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        height: $about-us-padding-top;
+        position: absolute;
+        background-color: #EEF1FB;
+        background-position: 0 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: white;
+        background-image: url("background.svg");
+        background-repeat: no-repeat;
+        background-size: 101%;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 1px;
+        height: $about-us-padding-bottom;
     }
 }
 
@@ -47,6 +83,7 @@ $background-color: #EEF1FB;
         padding-left: 20px;
         line-height: 23px;
         margin-bottom: 8px;
+        font-size: 14px;
 
         &:before {
             content: "";
