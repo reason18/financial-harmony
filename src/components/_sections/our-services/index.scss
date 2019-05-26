@@ -1,0 +1,102 @@
+$min-section-height: 628px;
+$background-color: #EEF1FB;
+$about-us-padding-top: 176px;
+$about-us-padding-bottom: 130px;
+
+.about-us {
+    position: relative;
+    min-height: $min-section-height;
+    padding-top: $about-us-padding-top;
+    padding-bottom: $about-us-padding-bottom;
+    // background-image: url("background_1.svg");
+
+    .about-us-content {
+        background-color: $background-color;
+    }
+
+    .illustration-placeholder {
+        height: 370px;
+        width: 100%;
+        background-color: burlywood;
+        border-radius: 10px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        height: $about-us-padding-top;
+        position: absolute;
+        background-color: #EEF1FB;
+        background-position: 0 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: white;
+        background-image: url("background.svg");
+        background-repeat: no-repeat;
+        background-size: 101%;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 1px;
+        height: $about-us-padding-bottom;
+    }
+}
+
+.about-us-illustration {
+    padding-right: 95px!important;
+}
+
+.about-us-info {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.about-us-goals {
+    margin-top: 40px;
+    h3 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+
+        letter-spacing: 0.02em;
+
+        color: #444444;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        position: relative;
+        padding-left: 20px;
+        line-height: 23px;
+        margin-bottom: 8px;
+        font-size: 14px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            display: block;
+            -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+            width: 6px;
+            height: 6px;
+            background: #246AF0;
+            border-radius: 50%;
+        }
+    }
+}

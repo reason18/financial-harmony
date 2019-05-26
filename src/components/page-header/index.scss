@@ -10,13 +10,17 @@
   color: #444444;
 }
 
+.page-header.aling-center {
+  text-align: center;
+}
+
 .page-header span {
   position: relative;
   display: inline-block;
   margin-top: 20px;
 }
 
-.page-header span:before{
+.page-header span:before {
   content: "";
   position: absolute;
   height: 4px;
@@ -25,12 +29,12 @@
   border-radius: 5px;
 }
 
-.page-header.aling-left span:before{
+.page-header.aling-left span:before {
   top: -20px;
   left: 0;
 }
 
-.page-header.aling-center {
+.page-header.aling-center span:before {
   top: -20px;
   left: 50%;
   transform: translate(-50%);
