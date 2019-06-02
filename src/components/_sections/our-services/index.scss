@@ -1,16 +1,16 @@
-$min-section-height: 628px;
+// $min-section-height: 628px;
 $background-color: #EEF1FB;
-$about-us-padding-top: 176px;
-$about-us-padding-bottom: 130px;
+$our-services-padding-top: 174px;
+$our-services-padding-bottom: 174px;
 
-.about-us {
+.our-services {
     position: relative;
-    min-height: $min-section-height;
-    padding-top: $about-us-padding-top;
-    padding-bottom: $about-us-padding-bottom;
+    // min-height: $min-section-height;
+    padding-top: $our-services-padding-top;
+    padding-bottom: $our-services-padding-bottom;
     // background-image: url("background_1.svg");
 
-    .about-us-content {
+    .our-services-content {
         background-color: $background-color;
     }
 
@@ -24,14 +24,16 @@ $about-us-padding-bottom: 130px;
     &:before {
         content: "";
         display: block;
-        height: $about-us-padding-top;
         position: absolute;
-        background-color: #EEF1FB;
-        background-position: 0 100%;
+        background-color: white;
+        background-image: url("background_top.svg");
+        background-repeat: no-repeat;
+        background-size: 101%;
         z-index: -1;
         top: 0;
         left: 0;
         right: 0;
+        height: $our-services-padding-top;
     }
 
     &:after {
@@ -39,29 +41,33 @@ $about-us-padding-bottom: 130px;
         display: block;
         position: absolute;
         background-color: white;
-        background-image: url("background.svg");
+        background-image: url("background_bottom.svg");
         background-repeat: no-repeat;
         background-size: 101%;
         z-index: -1;
         left: 0;
         right: 0;
         bottom: 1px;
-        height: $about-us-padding-bottom;
+        height: $our-services-padding-bottom;
+    }
+
+    .page-header {
+        margin-bottom: 48px;
     }
 }
 
-.about-us-illustration {
-    padding-right: 95px!important;
+.our-services-illustration {
+    // padding-right: 95px!important;
 }
 
-.about-us-info {
-    margin-top: 40px;
-    font-size: 14px;
-    line-height: 23px;
-}
+// .our-services-info {
+//     margin-top: 40px;
+//     font-size: 14px;
+//     line-height: 23px;
+// }
 
-.about-us-goals {
-    margin-top: 40px;
+.our-services-list {
+
     h3 {
         font-family: Montserrat;
         font-style: normal;
