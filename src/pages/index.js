@@ -2,7 +2,7 @@ import React from "react";
 // import { Link } from "gatsby";
 
 import { Layout, Image, SEO } from "../components";
-import { Promo, OutServices, AboutUs, OutClients, Advantages } from "../components/_sections";
+import { Promo, OutServices, AboutUs, OutClients, Advantages, Garanties } from "../components/_sections";
 import "../assets/fonts/fonts.css";
 
 import "./index.scss";
@@ -15,6 +15,7 @@ const IndexPage = () => (
     <OutClients />
     <OutServices />
     <Advantages />
+    <Garanties />
   </Layout>
 );
 
