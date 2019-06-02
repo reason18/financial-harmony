@@ -1,0 +1,93 @@
+$background-color: white;
+$advantages-padding-top: 60px;
+$advantages-padding-bottom: 80px;
+$advantages-illustration-width: 130px;
+$advantages-illustration-height: 130px;
+$advantages-illustration-padding-left: 62px;
+$advantages-list-item-width: calc(#{$advantages-illustration-width} + (#{$advantages-illustration-padding-left} * 2)  + 2px);
+
+.advantages {
+    position: relative;
+    padding-top: $advantages-padding-top;
+    padding-bottom: $advantages-padding-bottom;
+    // background-image: url("background_1.svg");
+
+    .advantages-content {
+        background-color: $background-color;
+    }
+
+    // .illustration-placeholder {
+    //     height: 370px;
+    //     width: 100%;
+    //     background-color: #F4F4F4;
+    //     border-radius: 10px;
+    // }
+
+    .advantages-info {
+        max-width: 788px;
+        margin-top: 40px;
+        margin-bottom: 42px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        line-height: 23px;
+        text-align: center;
+    }
+
+    .advantages-list {
+        // max-width: $advantages-list-width;
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            width: $advantages-list-item-width;
+            border-radius: 10px;
+            border: 1px solid gainsboro;
+            background-color: white;
+        }
+
+        li .advantages-illustration {
+            padding: 40px 62px;
+            // margin-bottom: 30px;
+            span {
+                display: block;
+                margin: 0px;
+                width: $advantages-illustration-width;
+                height: $advantages-illustration-height;
+                border-radius: 50%;
+                background-color: #F4F4F4;
+            }
+        }
+
+        li h3 {
+            // refactoring
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+    
+            letter-spacing: 0.02em;
+    
+            color: #444444;
+            margin-bottom: 20px;
+
+
+            padding: 0 20px;
+            margin-bottom: 15px;
+            min-height: 17px;
+        }
+
+        li p {
+            font-family: Open Sans;
+            padding: 0 20px;
+            font-size: 12px;
+            line-height: 19px;
+            min-height: 118px;
+        }
+    }
+    
+    
+}
