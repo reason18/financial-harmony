@@ -1,0 +1,14 @@
+.icon {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .icon.tel {
+    background-image: url("./phone-icon.svg")
+  }
+
+  .icon.mailto {
+    background-image: url("./email-icon.svg");
+  }
