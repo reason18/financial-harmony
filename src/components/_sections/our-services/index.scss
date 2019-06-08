@@ -67,42 +67,75 @@ $our-services-padding-bottom: 185px;
 // }
 
 .our-services-list {
+    .item {
 
-    h3 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
+        h3 {
+            font-size: 14px;
+            line-height: 17px;
+            height: 100%;
+            margin: 0;
 
-        letter-spacing: 0.02em;
+        }
 
-        color: #444444;
-        margin-bottom: 20px;
-    }
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    li {
         position: relative;
-        padding-left: 20px;
-        line-height: 23px;
-        margin-bottom: 8px;
-        font-size: 14px;
+        border-bottom: 1px solid #E6E6E6;
+        overflow: hidden;
 
-        &:before {
+
+        label {
+            display: block;
+            margin: 0;
+            height: 100%;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+
+        p {
+            max-height: 0px;
+            overflow: hidden;
+            margin: 0;
+            // transition: max-height .2s ease-in-out;
+        }
+
+        &::before {
             content: "";
             position: absolute;
-            left: 4px;
-            top: 50%;
+            right: 0;
+            top: 20px;
             display: block;
-            -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-            width: 6px;
-            height: 6px;
-            background: #246AF0;
-            border-radius: 50%;
+            width: 14px;
+            height: 3px;
+            background-color: #246AF0;
+            z-index: 1;
         }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 20px;
+            display: block;
+            width: 14px;
+            height: 3px;
+            background-color: #246AF0;
+            transform: rotate(90deg);
+            transition: transform .2s ease-in-out;
+            z-index: 1;
+        }
+        &.expanded::after {
+            transform: rotate(0deg)
+        }
+        &.expanded {
+            padding-bottom: 20px;
+            p {
+                max-height: 500px;
+                padding-top:20px
+            }
+        }
+           
+    }
+
+    input {
+        display: none;
     }
 }

@@ -2,6 +2,59 @@ import React from "react";
 import { PageHeader } from "../../page-header";
 import "./index.scss";
 
+const services = [
+  {
+    title: "Услуга 1",
+    text:
+      "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.",
+  },
+  {
+    title: "Услуга 2",
+    text:
+      "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.",
+  },
+  {
+    title: "Услуга 3",
+    text:
+      "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.",
+  },
+  {
+    title: "Услуга 4",
+    text:
+      "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.",
+  },
+];
+
+const CollapseListItem = ({ item, index, expandedIndex, onClick }) => {
+  return (
+    <div className={expandedIndex === index ? "item expanded" : "item"}>
+      <h3 className="default-header" onClick={() => onClick(index)}>
+        <label>
+          <span>{item.title}</span>
+          <input type="radio" name="services" defaultChecked />
+        </label>
+      </h3>
+      <p>{item.text}</p>
+    </div>
+  );
+};
+
+class CollapseList extends React.Component {
+  state = {
+    espanded: 1,
+  };
+  onClick = index => {
+    this.setState({ espanded: index });
+  };
+  render() {
+    return (
+      <div className="">
+        { services.map((item, i) => <CollapseListItem expandedIndex={this.state.espanded} key={i} item={item} index={i+1} onClick={this.onClick}/>) }
+      </div>
+    );
+  }
+}
+
 export const OutServices = () => {
   return (
     <section className="our-services">
@@ -13,118 +66,7 @@ export const OutServices = () => {
 
           <div className="col-6 pr-4">
             <div className="our-services-list">
-              {/* <h3>Наши цели</h3> */}
-              <div className="accordion" id="accordionExample">
-                <div className="card">
-                  <div className="card-header" id="headingOne">
-                    <h5 className="mb-0">
-                      <button
-                        className="btn btn-link"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Разворачиваемая панель #1
-                      </button>
-                    </h5>
-                  </div>
-
-                  <div
-                    id="collapseOne"
-                    className="collapse show"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="headingTwo">
-                    <h5 className="mb-0">
-                      <button
-                        className="btn btn-link collapsed"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        Разворачиваемая панель #2
-                      </button>
-                    </h5>
-                  </div>
-                  <div
-                    id="collapseTwo"
-                    className="collapse"
-                    aria-labelledby="headingTwo"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="headingThree">
-                    <h5 className="mb-0">
-                      <button
-                        className="btn btn-link collapsed"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        Разворачиваемая панель #3
-                      </button>
-                    </h5>
-                  </div>
-                  <div
-                    id="collapseThree"
-                    className="collapse"
-                    aria-labelledby="headingThree"
-                    data-parent="#accordionExample"
-                  >
-                    <div className="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CollapseList />
             </div>
           </div>
           <div className="our-services-illustration col-6 pl-4">
