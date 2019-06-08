@@ -4,3 +4,4 @@ export * from "./about-us";
 export * from "./our-clients";
 export * from "./advantages";
 export * from "./garanties";
+export * from "./became-a-client";
